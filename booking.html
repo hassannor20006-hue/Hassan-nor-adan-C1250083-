@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Booking | Cozy Bean Cafe</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="cdd.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">☕</div>
+      <div><h1>Cozy Bean Cafe</h1><p>Guest Booking</p></div>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="gellery.html">Gallery & Data</a>
+      <a href="booking.html" class="active">Guest Booking</a>
+      <a href="help.html">Help</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <form class="booking-form card">
+      <h2>Booking Form</h2>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your full name" required />
+
+      <label for="major">Major</label>
+      <select id="major" required>
+        <option value="">Choose your major</option>
+        <option>Computer Science</option>
+        <option>Information Technology</option>
+        <option>Business</option>
+        <option>Other</option>
+      </select>
+
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male" required /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+        <label><input type="radio" name="gender" value="other" /> Other</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Hobbies</legend>
+        <label><input type="checkbox" name="hobbies" value="reading" /> Reading</label>
+        <label><input type="checkbox" name="hobbies" value="music" /> Music</label>
+        <label><input type="checkbox" name="hobbies" value="coding" /> Coding</label>
+      </fieldset>
+
+      <label for="comments">Comments</label>
+      <textarea id="comments" rows="5" placeholder="Write your comments here" required></textarea>
+
+      <button class="btn primary" type="submit">Submit Booking</button>
+    </form>
+  </main>
+</body>
+</html>
