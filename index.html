@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cozy Cafe & Coffee Shop website with menu, daily specials, gallery, booking, and online ordering." />
+  <title>Cozy Bean Cafe</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="cdd.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">☕</div>
+      <div>
+        <h1>Cozy Bean Cafe</h1>
+        <p>Warm coffee, fresh bites, happy moments.</p>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="gellery.html">Gallery & Data</a>
+      <a href="booking.html">Guest Booking</a>
+      <a href="help.html">Help</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <span class="tag">Food & Hospitality</span>
+        <h2>Enjoy a cozy cafe experience.</h2>
+        <p>Explore our menu, check daily specials, and place a quick online order for pickup or delivery.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#menu">View Menu</a>
+          <a class="btn secondary" href="booking.html">Book a Visit</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Today’s Specials</h3>
+        <ul>
+          <li>Caramel Latte + Croissant</li>
+          <li>Signature Cappuccino</li>
+          <li>Chicken Panini Combo</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="menu" class="section grid-3">
+      <article class="card">
+        <h3>Coffee Classics</h3>
+        <p>Espresso, Americano, Cappuccino, Latte, Mocha, and Macchiato.</p>
+      </article>
+      <article class="card">
+        <h3>Fresh Bites</h3>
+        <p>Croissants, muffins, sandwiches, pancakes, and fruit bowls.</p>
+      </article>
+      <article class="card">
+        <h3>Online Order</h3>
+        <p>Fill the order form and send your favorite items for pickup or delivery.</p>
+      </article>
+    </section>
+
+    <section class="section order-section">
+      <div class="card order-info">
+        <h3>Why choose us?</h3>
+        <p>A friendly atmosphere, quality ingredients, and a simple website that makes ordering easy.</p>
+      </div>
+      <form class="order-form card" id="orderForm">
+        <h3>Quick Order Form</h3>
+        <label for="customerName">Full Name</label>
+        <input id="customerName" name="customerName" type="text" placeholder="Enter your name" required />
+
+        <label for="orderItem">Order Item</label>
+        <select id="orderItem" name="orderItem" required>
+          <option value="">Select an item</option>
+          <option>Latte</option>
+          <option>Cappuccino</option>
+          <option>Espresso</option>
+          <option>Chicken Sandwich</option>
+          <option>Chocolate Cake</option>
+        </select>
+
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" min="1" max="20" value="1" required />
+
+        <div class="inline-options">
+          <label><input type="radio" name="delivery" value="pickup" checked /> Pickup</label>
+          <label><input type="radio" name="delivery" value="delivery" /> Delivery</label>
+        </div>
+
+        <label for="notes">Special Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Add extra details..."></textarea>
+
+        <button class="btn primary" type="submit">Place Order</button>
+        <p class="form-message" id="orderMessage" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Cozy Bean Cafe. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+  </html>
